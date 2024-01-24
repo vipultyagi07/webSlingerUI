@@ -1,4 +1,6 @@
-git commands 
+# webSlingerUI
+
+# git commands 
 
 1st - checkout command 
 "git checkout 'branch name'"
@@ -21,4 +23,4 @@ git commands
 
 5th- command to checkout(switch) to other branch 
 
-     "git checkout 'other branch name' "
+     "git checkout 'other branch name' "
