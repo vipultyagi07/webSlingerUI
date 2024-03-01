@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function TextForm() {
+export default function TextForm(props) {
   const handleUpCase = () => {
     console.log("text is changed to upper case" + text);
     let newText = text.toUpperCase();
@@ -32,11 +32,11 @@ export default function TextForm() {
       <div>
         <h1> Enter the text below to analyze </h1>
         <div className="mb-3">
-          <textarea className="form-control" value={text} onChange={handleChangeUp} id="exampleFormControlTextarea1" rows="8"></textarea>
+          <textarea className="form-control" value={text} onChange={handleChangeUp} style={{background: props.mode === 'light' ? 'dark' : 'light'}} id="exampleFormControlTextarea1" rows="8"></textarea>
         </div>
         <button className="btn btn-primary mx-1" onClick={handleUpCase}>Convert into Upper Case</button>
         <button className="btn btn-primary mx-1" onClick={handleLoChange}>convert it into lower Case</button>
-        <button className="btn btn-primary mx-1" onClick={handleToDelete}>delete all the text present in the text area</button>
+        <button className="btn btn-primary mx-1" onClick={handleToDelete}>Clear</button>
       </div>
       <div className="container">
         <p>{text.split(" ").length - 1} Word</p>

@@ -1,14 +1,38 @@
-import React from "react";
+import React,{useState}from "react";
 
 export default function About() {
+  const [mystyle,setMyStyle] = useState({
+    color:'black',
+    backgroundColor : 'white'
+  })
+
+  const [btntext,setBtnText] = useState("enable dark mode")
+
+  const toggleStyle = ()=>{
+    if(mystyle.color === 'white'){
+      setMyStyle({
+        color:'black',
+        backgroundColor:'white'
+      })
+      setBtnText("enable-dark mode")
+    }
+    else{
+      setMyStyle({
+        color:'white',
+        backgroundColor:'black'
+      })
+      setBtnText("enable-light mode")
+    }
+  }
+  
   return (
-    <div className="container">
+    <div className="container" style = {mystyle}>
       <h1 className="my-3">About-us</h1>
-      <div class="accordion" id="accordionExample">
+      <div class="accordion" id="accordionExample"style = {mystyle}>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
-              class="accordion-button"
+              class="accordion-button" style = {mystyle}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
@@ -21,7 +45,7 @@ export default function About() {
           <div
             id="collapseOne"
             class="accordion-collapse collapse show"
-            data-bs-parent="#accordionExample"
+            data-bs-parent="#accordionExample" style = {mystyle}
           >
             <div class="accordion-body">
               <strong>This is the first item's accordion body.</strong> It is
@@ -38,7 +62,7 @@ export default function About() {
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed"
+              class="accordion-button collapsed" style = {mystyle}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
@@ -50,7 +74,7 @@ export default function About() {
           </h2>
           <div
             id="collapseTwo"
-            class="accordion-collapse collapse"
+            class="accordion-collapse collapse" style = {mystyle}
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
@@ -68,7 +92,7 @@ export default function About() {
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed"
+              class="accordion-button collapsed" style = {mystyle}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"
@@ -80,7 +104,7 @@ export default function About() {
           </h2>
           <div
             id="collapseThree"
-            class="accordion-collapse collapse"
+            class="accordion-collapse collapse" style = {mystyle}
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
@@ -95,7 +119,7 @@ export default function About() {
             </div>
           </div>
         </div>
+          <button type="button" className="btn btn-primary my-3" style = {mystyle} onClick={toggleStyle}>{btntext}</button></div>
       </div>
-    </div>
   );
 }
