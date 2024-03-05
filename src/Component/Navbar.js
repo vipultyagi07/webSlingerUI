@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,NavLink} from "react-router-dom";
 
 export default function Navbar(props) {
   const [style,SetStyle] = useState({
@@ -32,25 +32,37 @@ export default function Navbar(props) {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link mx-3 text-light" type="submit" to="/Sign in ">
+              <Link className="nav-link mx-3 text-light" type="submit" to="/Signin ">
                 Sign in
               </Link>
             </li>
             <li className="nav-item ">
-              <Link className="nav-link mx-3 text-light" type="submit" to="/Sign up">
+              <Link className="nav-link mx-3 text-light" type="submit" to="/Signup">
                 Sign Up
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" type = "submit" to = "/ Contact us"> Contact us</Link>
+              <Link className="nav-link text-light" type = "submit" to = "/ Contactus"> Contact us</Link>
             </li>
             </ul>
            <form className="d-flex" role="search" >
             <input className="form-control me-2 text-light"  type="search" placeholder="search" area-label="Search" />
             <button className="btn btn-outline-success text-light " type = "submit">Search</button>
-
            </form>
+           <NavLink to="/about" className={({isActive})=> `${isActive ? 'text-orange-700' : 'text-light'}`
+          }>
+            about
+           </NavLink>
+           <NavLink to="/Signup" className={({isActive})=> `${isActive ? 'text-orange-700' : 'text-light'}`
+          }>
+            Signup
+           </NavLink>
+           <NavLink to="/Signin" className={({isActive})=> `${isActive ? 'text-orange-700' : 'text-light'}`
+          }>
+            Signin
+           </NavLink>
         
+
         </div>
       </div>
     </nav>

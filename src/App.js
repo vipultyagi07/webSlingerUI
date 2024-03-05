@@ -8,8 +8,7 @@ import {
   Switch,
   Route,
   Link
-} from "react-router-dom"
-
+} from "react-router-dom";
 function App() {
   return (
     <>
