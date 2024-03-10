@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link,NavLink} from "react-router-dom";
+// import { Link,NavLink} from "react-router-dom";
 
 export default function Navbar(props) {
   const [style,SetStyle] = useState({
@@ -28,28 +28,28 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item" type = "submit">
-              <Link className="nav-link text-light" to = "/about">about</Link>
+              <a className="nav-link text-light" href = "/about">about</a>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link mx-3 text-light" type="submit" to="/Signin ">
+              <a className="nav-link mx-3 text-light" type="submit" href="/Signin ">
                 Sign in
-              </Link>
+              </a>
             </li>
             <li className="nav-item ">
-              <Link className="nav-link mx-3 text-light" type="submit" to="/Signup">
+              <a className="nav-link mx-3 text-light" type="submit" href = "/Signup">
                 Sign Up
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" type = "submit" to = "/ Contactus"> Contact us</Link>
+              <a className="nav-link text-light" type = "submit" href = "/ Contactus"> Contact us</a>
             </li>
             </ul>
            <form className="d-flex" role="search" >
             <input className="form-control me-2 text-light"  type="search" placeholder="search" area-label="Search" />
             <button className="btn btn-outline-success text-light " type = "submit">Search</button>
            </form>
-           <NavLink to="/about" className={({isActive})=> `${isActive ? 'text-orange-700' : 'text-light'}`
+           {/* <NavLink to="/about" className={({isActive})=> `${isActive ? 'text-orange-700' : 'text-light'}`
           }>
             about
            </NavLink>
@@ -60,7 +60,7 @@ export default function Navbar(props) {
            <NavLink to="/Signin" className={({isActive})=> `${isActive ? 'text-orange-700' : 'text-light'}`
           }>
             Signin
-           </NavLink>
+           </NavLink> */}
         
 
         </div>

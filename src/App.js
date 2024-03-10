@@ -1,27 +1,24 @@
 import './App.css';
+import React from 'react';
 import Alert from './Component/Alert';
-import Login_Y from './Component/Login_Y';
-import About from './Component/About';
+// import Login_Y from './Component/Login_Y';
+// import About from './Component/About';
 import Navbar from './Component/Navbar';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+import Rotator from './Component/Rotator';
+import Sign_in from './Component/Sign_in';
+import Login_Y from './Component/Login_Y';
+// import { Switch, Route , BrowserRouter as Router } from 'react-router-dom';
+
 function App() {
   return (
     <>
-      <Router>
-        <Navbar /> {/* If Navbar uses Link, it should be inside Router */}
-        <Switch>
-          <Route path="/About">
-            <About />
-          </Route>
-          {/* Add more routes for other components if needed */}
-        </Switch>
-      </Router>
-    </>    
+    <Alert/>
+    <Navbar/>
+    {/* <Rotator/>  */}
+    <Sign_in/>
+    
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Slider() {
+export default function Rotator() {
   const [currentIndex, SetCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
