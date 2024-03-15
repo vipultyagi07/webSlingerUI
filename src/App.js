@@ -1,24 +1,25 @@
 import './App.css';
 import React from 'react';
-import Alert from './Component/Alert';
-// import Login_Y from './Component/Login_Y';
-// import About from './Component/About';
+import SignIn from './Component/SignIn';
+import { BrowserRouter, Routes,Route , Link, Router} from 'react-router-dom';
+import SignUp from './Component/SignUp';
 import Navbar from './Component/Navbar';
+import About from './Component/About';
 
-import Rotator from './Component/Rotator';
-import Sign_in from './Component/Sign_in';
-import Login_Y from './Component/Login_Y';
-// import { Switch, Route , BrowserRouter as Router } from 'react-router-dom';
+
 
 function App() {
   return (
     <>
-    <Alert/>
+    <BrowserRouter>
     <Navbar/>
-    {/* <Rotator/>  */}
-    <Sign_in/>
-    
-    </>
+    <Routes>
+      <Route path='/SignIn' element={<SignIn/>}/>
+      <Route path='/SignUp' element={<SignUp/>}/>
+      <Route path='/about' element={<About/>}/>
+          </Routes>
+    </BrowserRouter>
+   </>
   );
 }
 

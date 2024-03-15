@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import { Link,NavLink} from "react-router-dom";
 
 export default function Navbar(props) {
@@ -11,9 +12,9 @@ export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg  " style={style}>
       <div className="container-fluid">
-        <a className="navbar-brand mx-3 text-light" href="/">
+        <Link className="navbar-brand mx-3 text-light" to="/">
           Car Park
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,21 +29,21 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item" type = "submit">
-              <a className="nav-link text-light" href = "/about">about</a>
+              <Link className="nav-link text-light" to = "/about">about</Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link mx-3 text-light" type="submit" href="/Signin ">
+              <Link className="nav-link mx-3 text-light" type="submit" to="/SignIn ">
                 Sign in
-              </a>
+              </Link>
             </li>
             <li className="nav-item ">
-              <a className="nav-link mx-3 text-light" type="submit" href = "/Signup">
+              <Link className="nav-link mx-3 text-light" type="submit" to = "/SignUp">
                 Sign Up
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light" type = "submit" href = "/ Contactus"> Contact us</a>
+              <Link className="nav-link text-light" type = "submit" to = "/ContactUs"> Contact us</Link>
             </li>
             </ul>
            <form className="d-flex" role="search" >

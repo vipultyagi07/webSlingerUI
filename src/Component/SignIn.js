@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 const ButtC = {
 
     backgroundColor: 'white',
@@ -77,7 +78,7 @@ const logoStyles1 = {
 }
 
 
-function Sign_in() {
+function SignIn() {
     return (
         
         <div className='  Login-container ' style={containerStyles} >
@@ -105,12 +106,12 @@ function Sign_in() {
                 </div>
                 <div  style={Forgottenb}>
 
-                    <a className='input-group' type='submit'>
+                    <Link  to = "/forgotPassword"className='input-group' type='submit'>
                         Forgotten password?
-                    </a>
-                    <a className='input-group' style={Forgottenb} type='submit'>
+                    </Link>
+                    <Link to="/SignIn" className='input-group' style={Forgottenb} type='submit'>
                         Don't have account
-                    </a>
+                    </Link>
                 </div>
 <div>
                 <button className='primary my-2 container' type='submit' style={ButtC}> Login with  <img className='logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png' alt='logo' style={logoStyles} /></button>
@@ -123,5 +124,4 @@ function Sign_in() {
     )
 }
 
-export default Sign_in
-
+export default SignIn
